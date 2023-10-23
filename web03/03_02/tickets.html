@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tickets.html</title>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light px-5" style="height: 100px; background-color: #d0f6ff;">
+          <div class="navbar-nav">
+            <img src="./img/LOGO.png" style="height: 50px;" alt="">
+            <a class=" nav-link" href="home.html" style="font-size: 20px;">Home</a>
+            <a class=" nav-link" href="news.html" style="font-size: 20px;">News</a>
+            <a class=" nav-link" href="discover.html" style="font-size: 20px;">Discover</a>
+            <a class=" nav-link active" href="tickets.html" style="font-size: 20px;">Tickets <span class="sr-only">(current)</span></a>
+          </div>
+      </nav>
+      <!--ticketfrom-->
+<div class="center">
+        <h1 style="text-align: center; margin-top: 100px;">Tickets</h1>
+        <form action="tickets.php" method="post" id="form" class="ticketform">
+                <input type="text" class="newinput" name="first_name" id="first_name" placeholder="名字（First name）" required>
+                <input type="text" class="newinput" name="last_name" id="last_name" placeholder="姓氏（Last name）" required>
+                <input type="text" class="newinput" name="phone" id="phone" placeholder="手機號碼（Phone）" required>
+                <input type="password" class="newinput" name="password" id="password" placeholder="會員密碼（Password）" required>
+                <span class="veri col-1" style="font-size:40px; font-family: Papyrus; user-select: none;"></span>
+                <input type="text" class="newinput " name="veri" id="captcha" placeholder="數字驗證（Verification）" required>
+                <input type="submit" value="送出（Submit）" style="box-shadow: 0 4px 8px 0 #9ad1b4; color: white; background-color: #9ad1b4; ">
+            </form>
+          </div>
+ <!--footer-->
+  <!--social software-->
+  <img src="./img/facebook.png" alt="" style="height: 40px; left: 1px;" class="fixed-bottom">
+  <img src="./img/google.png" alt="" style="height: 40px; left: 42px;" class="fixed-bottom">
+  <footer class="fixed-bottom text-center">Copyright © 2023 YODEX All Rights Reserved</footer>
+<!--src-->
+  <script src="./jquery/jquery.js"></script>
+  <script src="./bootstrap/bootstrap.js"></script>
+  <script>
+    $(".veri").load("veri.php");
+  </script>
+</body>
+</html>

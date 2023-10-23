@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>discover.html</title>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light px-5" style="height: 100px; background-color: #d0f6ff;">
+          <div class="navbar-nav">
+            <img src="./img/LOGO.png" style="height: 50px;" alt="">
+            <a class=" nav-link" href="home.html" style="font-size: 20px;">Home</a>
+            <a class=" nav-link" href="news.html" style="font-size: 20px;">News</a>
+            <a class=" nav-link active" href="discover.html" style="font-size: 20px;">Discover <span class="sr-only">(current)</span></a>
+            <a class=" nav-link" href="tickets.html" style="font-size: 20px;">Tickets</a>
+          </div>
+      </nav>
+  <!--Collapse-->
+  <main style="margin-top: 80px;">
+    <div class="event container p-3 border border-dark border-top-0 border-right-0 ">
+      <div style="display:inline-block;">
+        <img src="./img/Carousel1.jpg" alt=""
+          style="display:inline-block;width:500px;height:400px;border:1px solid #ddd" class="e">
+      </div>
+      <div style="display:inline-block;width:600px">
+        <h2>設計展資訊區</h2>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi suscipit iusto sint sapiente itaque
+          praesentium voluptatibus distinctio quidem animi, minima odio sequi. Dolorem enim, eius eligendi
+          necessitatibus maiores quasi minus!</div>
+
+      </div>
+    </div>
+    <div class="show-list container p-3" style="border-right:1px solid rgb(0, 0, 0)">
+      <div class="d-inline-block w-50">
+        <h2>作品介紹區</h2>
+
+        <div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At rem assumenda libero perferendis, saepe
+          exercitationem dicta odit ex tempore velit fuga quas molestiae aliquam earum obcaecati natus ratione
+          reprehenderit modi.</div>
+        <div class="collapse" id="readmore">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi, ullam qui iusto nulla aspernatur?
+          Aliquam, eos. Nisi beatae quam in, error amet voluptatum obcaecati dolor facilis molestiae nulla explicabo.
+        </div>
+        <button class="btn btn-primary" style="background-color: #9ad1b4; border: none; box-shadow: 0 4px 8px 0 #9ad1b4;" data-toggle="collapse"
+          data-target="#readmore" aria-controls="readmore" id="btn1">Read more</button>
+        <div class="collapse" id="readMore">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi, ullam qui iusto nulla aspernatur?
+          Aliquam, eos. Nisi beatae quam in, error amet voluptatum obcaecati dolor facilis molestiae nulla explicabo.
+        </div>
+        <button class="btn btn-primary" style="background-color: #9ad1b4; border: none; box-shadow: 0 4px 8px 0 #9ad1b4;" data-toggle="collapse"
+          data-target="#readMore" aria-controls="readMore" id="btn2">Read More</button>
+      </div>
+          <img src="./img/Carousel2.jpg" alt=""
+          style="display:inline-block;width:500px;height:400px;border:1px solid #ddd" class="position-absolute">
+    </div>
+  </main>
+ <!--footer-->
+  <!--social software-->
+      <img src="./img/facebook.png" alt="" style="height: 40px; left: 1px;" class="fixed-bottom">
+      <img src="./img/google.png" alt="" style="height: 40px; left: 42px;" class="fixed-bottom">
+      <footer class="fixed-bottom text-center">Copyright © 2023 YODEX All Rights Reserved</footer>
+  <!--src-->
+  <script src="./jquery/jquery.js"></script>
+  <script src="./bootstrap/bootstrap.js"></script>
+  <!--More to Less-->
+  <script>
+    $("#readmore").on('show.bs.collapse', () => {
+      $("#btn1").text("Read less");
+    })
+    $("#readmore").on('hide.bs.collapse', () => {
+      $("#btn1").text("Read more");
+    })
+
+    $("#readMore").on('show.bs.collapse', () => {
+      $("#btn2").text("Read less");
+    })
+    $("#readMore").on('hide.bs.collapse', () => {
+      $("#btn2").text("Read More");
+    })
+  </script>
+</body>
+</html>
